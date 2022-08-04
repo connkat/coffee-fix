@@ -21,7 +21,7 @@ function App() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setError(!description)
+    setError(!description);
     setSolution(findSolution(issue, description));
   };
 
@@ -29,20 +29,22 @@ function App() {
     <div className="App">
       <h1>Coffee Fix</h1>
       <form>
-        <p>My</p>
-        <DropdownSelect
-          value={issue}
-          handleChange={handleIssueChange}
-          options={["Pour Time", "Pressure", "Crema", "Taste"]}
-          error={error}
-        />
-        <p>is</p>
-        <DropdownSelect
-          value={description}
-          handleChange={handleDescriptionChange}
-          options={selectionOptions(issue)}
-          error={error}
-        />
+        <div className="main">
+          <h3>My</h3>
+          <DropdownSelect
+            value={issue}
+            handleChange={handleIssueChange}
+            options={["Pour Time", "Pressure", "Crema", "Taste"]}
+            error={error}
+          />
+          <h3>is</h3>
+          <DropdownSelect
+            value={description}
+            handleChange={handleDescriptionChange}
+            options={selectionOptions(issue)}
+            error={error}
+          />
+        </div>
       </form>
       <Button
         type="submit"
@@ -50,7 +52,7 @@ function App() {
         variant="outlined"
         onClick={handleSubmit}
       >
-        What do I do?
+        What is wrong?
       </Button>
       <p>{solution}</p>
     </div>
