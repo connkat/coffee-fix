@@ -1,40 +1,26 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import "./App.css";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import DropdownSelect from "./components/DropdownSelect";
+import { SelectChangeEvent } from "@mui/material/Select";
+import Button from "@mui/material/Button";
+import { findSolution, selectionOptions } from "./lib/helperFunctions";
 
 function App() {
   const [issue, setIssue] = useState("");
   const [description, setDescription] = useState("");
+  const [solution, setSolution] = useState("");
 
-  const handleIssueChange = (event: SelectChangeEvent) => {
-    setIssue(event.target.value as string);
+  const handleIssueChange = (e: SelectChangeEvent) => {
+    setIssue(e.target.value);
   };
 
-  const handleDescriptionChange = (event: SelectChangeEvent) => {
-    setDescription(event.target.value as string);
+  const handleDescriptionChange = (e: SelectChangeEvent) => {
+    setDescription(e.target.value);
   };
 
-  const options1 = ["Too long", "Too short"];
-  const options2 = ["Too high", "Too low"];
-  const options3 = ["Non existent"];
-  const options4 = ["Bitter", "Sour"];
-
-  const selectionOptions = (option: string) => {
-    if (option === "pourTime") {
-      return options1;
-    }
-    if (option === "pressure") {
-      return options2;
-    }
-    if (option === "crema") {
-      return options3;
-    }
-    if (option === "taste") {
-      return options4;
-    } else return [];
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    setSolution(findSolution(issue, description));
   };
 
   return (
@@ -42,37 +28,27 @@ function App() {
       <h1>Coffee Fix</h1>
       <form>
         <p>My</p>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Select One</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={issue}
-            label={issue}
-            onChange={handleIssueChange}
-          >
-            <MenuItem value="pourTime">Pour Time</MenuItem>
-            <MenuItem value="pressure">Pressure</MenuItem>
-            <MenuItem value="crema">Crema</MenuItem>
-            <MenuItem value="taste">Taste</MenuItem>
-          </Select>
-        </FormControl>
+        <DropdownSelect
+          value={issue}
+          handleChange={handleIssueChange}
+          options={["Pour Time", "Pressure", "Crema", "Taste"]}
+        />
         <p>is</p>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Select One</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={description}
-            label={description}
-            onChange={handleDescriptionChange}
-          >
-            {selectionOptions(issue).map((option) => (
-              <MenuItem value="description">{option}</MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+        <DropdownSelect
+          value={description}
+          handleChange={handleDescriptionChange}
+          options={selectionOptions(issue)}
+        />
       </form>
+      <Button
+        type="submit"
+        color="info"
+        variant="outlined"
+        onClick={handleSubmit}
+      >
+        What do I do?
+      </Button>
+      <p>{solution}</p>
     </div>
   );
 }
