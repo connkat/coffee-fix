@@ -9,6 +9,7 @@ function App() {
   const [issue, setIssue] = useState("");
   const [description, setDescription] = useState("");
   const [solution, setSolution] = useState("");
+  const [error, setError] = useState(false);
 
   const handleIssueChange = (e: SelectChangeEvent) => {
     setIssue(e.target.value);
@@ -20,6 +21,7 @@ function App() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    setError(!description)
     setSolution(findSolution(issue, description));
   };
 
@@ -32,12 +34,14 @@ function App() {
           value={issue}
           handleChange={handleIssueChange}
           options={["Pour Time", "Pressure", "Crema", "Taste"]}
+          error={error}
         />
         <p>is</p>
         <DropdownSelect
           value={description}
           handleChange={handleDescriptionChange}
           options={selectionOptions(issue)}
+          error={error}
         />
       </form>
       <Button
