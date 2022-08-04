@@ -1,4 +1,4 @@
-const options1 = ["Too slow", "Too long"];
+const options1 = ["Too slow", "Too fast"];
 const options2 = ["Too high", "Too low"];
 const options3 = ["Non existent"];
 const options4 = ["Bitter", "Sour"];
@@ -19,7 +19,7 @@ export function selectionOptions(option: string): Array<string> {
 }
 
 export function findSolution(description: string, option: string): string {
-  if (description === "Pour Time" && option === "Too long") {
+  if (description === "Pour Time" && option === "Too fast") {
     return "Not enough coffee OR your grind is too coarse OR your tamp is too light.";
   }
   if (description === "Pour Time" && option === "Too slow") {
