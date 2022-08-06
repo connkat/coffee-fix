@@ -54,7 +54,9 @@ function App() {
       >
         What is wrong?
       </Button>
-      <p>{solution}</p>
+      <div className="solution">
+        <p>{solution}</p>
+      </div>
     </div>
   );
 }
