@@ -2,4 +2,4 @@
 
 A quick fix app to tell you what is wrong with your espresso based off of your last pull. 
 
-Made very quicky using CRA. 
+Made very quicky using CRA, please don't judge the code.
