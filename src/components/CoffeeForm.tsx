@@ -6,7 +6,11 @@ import Button from "@mui/material/Button";
 
 import { findSolution, selectionOptions } from "../lib/helperFunctions";
 
-function Form() {
+type Props = {
+	temp: boolean;
+};
+
+function CoffeeForm({ temp }: Props) {
 	const [issue, setIssue] = useState("");
 	const [description, setDescription] = useState("");
 	const [solution, setSolution] = useState("");
@@ -23,7 +27,7 @@ function Form() {
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		setError(!description);
-		setSolution(findSolution(issue, description));
+		setSolution(findSolution(issue, description, temp));
 	};
 
 	return (
@@ -61,4 +65,4 @@ function Form() {
 	);
 }
 
-export default Form;
+export default CoffeeForm;
