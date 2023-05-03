@@ -6,11 +6,24 @@
   background-size: 100% 100%;
 }
 
-.main {
+.Settings {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 30vh;
+  padding-top: 25vh;
+  padding-bottom: 3vh;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 0vh;
   padding-bottom: 3vh;
 }
 

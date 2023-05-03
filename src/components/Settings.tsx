@@ -16,16 +16,22 @@ function Settings() {
 	return (
 		<div className="Settings">
 			<FormGroup>
-				<FormControlLabel
-					control={<Checkbox checked={temp} />}
-					label="Temp Control"
-          onClick={()=>{setTemp(!temp)}}
-				/>
-				<FormControlLabel
-					control={<Checkbox checked={time} />}
-					label="Time Control"
-          onClick={()=>{setTime(!time)}}
-				/>
+				<div className="checkboxes">
+					<FormControlLabel
+						control={<Checkbox checked={temp} />}
+						label="Temp Control"
+						onClick={() => {
+							setTemp(!temp);
+						}}
+					/>
+					<FormControlLabel
+						control={<Checkbox checked={time} />}
+						label="Time Control"
+						onClick={() => {
+							setTime(!time);
+						}}
+					/>
+				</div>
 			</FormGroup>
 		</div>
 	);

@@ -1,10 +1,9 @@
 import { FormEvent, useState } from "react";
-import "./Form.css";
+import "../App.css";
 import { SelectChangeEvent } from "@mui/material/Select";
 import DropdownSelect from "./DropdownSelect";
 import Button from "@mui/material/Button";
 
-import Settings from "./Settings";
 import { findSolution, selectionOptions } from "../lib/helperFunctions";
 
 function Form() {
@@ -29,11 +28,8 @@ function Form() {
 
 	return (
 		<div className="Form">
-			<h1>Coffee Fix</h1>
 			<form>
-				<div className="main">
-					<Settings />
-
+				<div className="form">
 					<h3>My</h3>
 					<DropdownSelect
 						value={issue}
