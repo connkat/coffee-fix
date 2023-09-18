@@ -4,7 +4,7 @@ import { SelectChangeEvent } from "@mui/material/Select";
 import DropdownSelect from "./DropdownSelect";
 import Button from "@mui/material/Button";
 
-import Infotip from "./Infotip";
+// import Infotip from "./Infotip";
 
 
 import { findSolution, selectionOptions } from "../lib/helperFunctions";
@@ -62,7 +62,7 @@ function CoffeeForm({ temp }: Props) {
 				What is wrong?
 			</Button>
 			<div className="solution">
-			<Infotip tip="Hello world!" />
+				{/* <Infotip tip="Hello world!" /> */}
 				<p>{solution}</p>
 			</div>
 		</div>
