@@ -17,7 +17,7 @@ function App() {
 				<h4>Can you control the:</h4>
 				<FormGroup>
 					<FormControlLabel
-          className="checkbox"
+						className="checkbox"
 						control={<Checkbox checked={temp} />}
 						label="Temperature"
 						onClick={() => {
