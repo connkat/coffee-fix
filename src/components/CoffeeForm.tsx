@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 
 // import Infotip from "./Infotip";
 
-
 import { findSolution, selectionOptions } from "../lib/helperFunctions";
 
 type Props = {

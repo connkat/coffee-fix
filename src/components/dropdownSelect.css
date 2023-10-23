@@ -1,0 +1,12 @@
+.formControl {
+	width: 30vh;
+}
+
+/* ////   Mobile   //// */
+
+@media only screen and (max-width: 600px) {
+	.formControl {
+		max-width: 15vh;
+	}
+
+}
