@@ -25,7 +25,7 @@ export function findSolution(
 ): string {
 	if (temp) {
 		if (description === "Pour Time" && option === "Too fast") {
-			return "Not enough coffee OR your grind is too coarse OR your tamp is too light. Alternatively, you can turn dwon your temp";
+			return "Not enough coffee OR your grind is too coarse OR your tamp is too light. Alternatively, you can turn down your temperature";
 		}
 		if (description === "Pour Time" && option === "Too slow") {
 			return "Too much coffee OR your grind is too fine OR your tamp is too hard. Alternatively, you can turn up your temp";
@@ -35,7 +35,7 @@ export function findSolution(
 		return "Not enough coffee OR your grind is too coarse OR your tamp is too light.";
 	}
 	if (description === "Pour Time" && option === "Too fast" && temp) {
-		return "Alternatively, you can turn dwon your temp";
+		return "Alternatively, you can turn down your temperature";
 	}
 	if (description === "Pour Time" && option === "Too slow") {
 		console.log("temp", temp);
