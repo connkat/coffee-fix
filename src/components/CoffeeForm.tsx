@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 
 import Infotip from "./Infotip";
 
-import { findSolution, selectionOptions } from "../lib/helperFunctions";
+import { findSolutions, selectionOptions } from "../lib/helperFunctions";
 
 type Props = {
 	temp: boolean;
@@ -15,7 +15,12 @@ type Props = {
 function CoffeeForm({ temp }: Props) {
 	const [issue, setIssue] = useState("");
 	const [description, setDescription] = useState("");
-	const [solution, setSolution] = useState("");
+	const [solutions, setSolutions] = useState([
+		{
+			tip: "",
+			additionalInfo: "",
+		},
+	]);
 	const [error, setError] = useState(false);
 
 	const handleIssueChange = (e: SelectChangeEvent) => {
@@ -29,7 +34,7 @@ function CoffeeForm({ temp }: Props) {
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		setError(!description);
-		setSolution(findSolution(issue, description, temp));
+		setSolutions(findSolutions(issue, description, temp));
 	};
 
 	return (
@@ -61,8 +66,7 @@ function CoffeeForm({ temp }: Props) {
 				What is wrong?
 			</Button>
 			<div className="solution">
-				<Infotip tip={solution} additionalInfo="Here is more" />
-				{/* <p>{solution}</p> */}
+				<Infotip tips={solutions} />
 			</div>
 		</div>
 	);
