@@ -31,47 +31,34 @@ export function findSolutions(
 	temp: boolean
 ): Array<TipObj> {
 	let output = obj;
-
-	if (temp) {
-		if (description === "Pour Time" && option === "Too fast") {
-			output = [
-				{
-					tip: "Not enough coffee",
-					additionalInfo: "test",
-				},
-				{ tip: "Your grind is too coarse", additionalInfo: "" },
-				{ tip: "Your tamp is too light", additionalInfo: "" },
-				{ tip: "Your temperature is too hot", additionalInfo: "" },
-			];
-		} else if (description === "Pour Time" && option === "Too slow") {
-			output = [
-				{ tip: "Too much coffee", additionalInfo: "" },
-				{ tip: "Your grind is too fine", additionalInfo: "" },
-				{ tip: "Your tamp is too hard", additionalInfo: "" },
-				{ tip: "You can temperature is too low", additionalInfo: "" },
-			];
-		}
-	} else if (description === "Pour Time" && option === "Too fast" && !temp) {
-		output = [
-			{ tip: "Not enough coffee", additionalInfo: "" },
+	if (description === "Pour Time" && option === "Too fast") {
+		return [
+			{
+				tip: "Not enough coffee",
+				additionalInfo: "test",
+			},
 			{ tip: "Your grind is too coarse", additionalInfo: "" },
 			{ tip: "Your tamp is too light", additionalInfo: "" },
+			{ tip: "Your temperature is too hot", additionalInfo: "" },
 		];
-	} else if (description === "Pour Time" && option === "Too fast" && temp) {
-		output = [
+	} else if (description === "Pour Time" && option === "Too slow") {
+		return [
+			{ tip: "Too much coffee", additionalInfo: "" },
+			{ tip: "Your grind is too fine", additionalInfo: "" },
+			{ tip: "Your tamp is too hard", additionalInfo: "" },
+			{
+				tip: "You can temperature is too low",
+				additionalInfo: "",
+			},
+		];
+	} else if (description === "Pour Time" && option === "Too fast") {
+		return [
 			{ tip: "Not enough coffee", additionalInfo: "" },
 			{ tip: "Your grind is too coarse", additionalInfo: "" },
 			{ tip: "Your tamp is too light", additionalInfo: "" },
 			{ tip: "Your temperature is too hot", additionalInfo: "" },
 		];
-	} else if (description === "Pour Time" && option === "Too slow" && !temp) {
-		console.log("temp", temp);
-		output = [
-			{ tip: "Too much coffee", additionalInfo: "" },
-			{ tip: "Your grind is too fine", additionalInfo: "" },
-			{ tip: "Your tamp is too hard", additionalInfo: "" },
-		];
-	} else if (description === "Pour Time" && option === "Too slow" && temp) {
+	} else if (description === "Pour Time" && option === "Too slow") {
 		output = [
 			{ tip: "Too much coffee", additionalInfo: "" },
 			{ tip: "Your grind is too fine", additionalInfo: "" },
@@ -89,7 +76,6 @@ export function findSolutions(
 			{ tip: "Your tamp is too light", additionalInfo: "" },
 		];
 	} else if (description === "Crema") {
-		console.log("here");
 		output = [
 			{ tip: "Your grind is too coarse", additionalInfo: "" },
 			{ tip: "Your beans are old", additionalInfo: "" },
