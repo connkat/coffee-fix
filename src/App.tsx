@@ -8,13 +8,13 @@ import Checkbox from "@mui/material/Checkbox";
 import CoffeeForm from "./components/CoffeeForm";
 
 function App() {
-	const [temp, setTemp] = useState(false);
+	// const [temp, setTemp] = useState(false);
 
 	return (
 		<div className="App">
 			<h1>Coffee Fix</h1>
 			<div className="controls">
-				<h4>Can you control the:</h4>
+				{/* <h4>Can you control the:</h4>
 				<FormGroup>
 					<FormControlLabel
 						className="checkbox"
@@ -24,9 +24,9 @@ function App() {
 							setTemp(!temp);
 						}}
 					/>
-				</FormGroup>
+				</FormGroup> */}
 			</div>
-			<CoffeeForm temp={temp} />
+			<CoffeeForm />
 		</div>
 	);
 }

@@ -27,8 +27,8 @@ let obj: TipObj[] = [];
 
 export function findSolutions(
 	description: string,
-	option: string,
-	temp: boolean
+	option: string
+	// temp: boolean
 ): Array<TipObj> {
 	let output = obj;
 	if (description === "Pour Time" && option === "Too fast") {

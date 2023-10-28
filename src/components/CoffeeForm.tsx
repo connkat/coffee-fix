@@ -8,11 +8,7 @@ import Infotip from "./Infotip";
 
 import { findSolutions, selectionOptions } from "../lib/helperFunctions";
 
-type Props = {
-	temp: boolean;
-};
-
-function CoffeeForm({ temp }: Props) {
+function CoffeeForm() {
 	const [issue, setIssue] = useState("");
 	const [description, setDescription] = useState("");
 	const [solutions, setSolutions] = useState([
@@ -34,7 +30,7 @@ function CoffeeForm({ temp }: Props) {
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		setError(!description);
-		setSolutions(findSolutions(issue, description, temp));
+		setSolutions(findSolutions(issue, description));
 	};
 
 	return (
