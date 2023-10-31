@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Tooltip } from "react-tooltip";
 import "../App.css";
 
@@ -8,18 +9,22 @@ type Props = {
 };
 
 export default function Infotip({ tips }: Props) {
+	const [modal, setModal] = useState(false);
+
+	const handleModal = () => {
+		setModal(!modal);
+	};
+
 	return (
 		<div className="Infotip" style={{ backgroundColor: "grey" }}>
 			{tips.map((tip, index) => (
 				<div key={index} className="tip">
-					<p data-tooltip-id="coffee-fact">{tip.tip}</p>
-					<a href={tip.link}>
-						<Tooltip
-							id="coffee-fact"
-							place="bottom"
-							content={tip.additionalInfo}
-						/>
-					</a>
+					<button onClick={handleModal}>{tip.tip}</button>
+					{modal ? (
+						<a href={tip.link}>
+							<p>{tip.additionalInfo}</p>
+						</a>
+					) : null}
 				</div>
 			))}
 		</div>

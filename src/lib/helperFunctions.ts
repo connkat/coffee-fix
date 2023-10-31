@@ -1,6 +1,7 @@
 type TipObj = {
 	tip: string;
 	additionalInfo: string;
+	link?: string;
 };
 
 const options1 = ["Too slow", "Too fast"];
@@ -77,8 +78,18 @@ export function findSolutions(
 		];
 	} else if (description === "Crema") {
 		output = [
-			{ tip: "Your grind is too coarse", additionalInfo: "" },
-			{ tip: "Your beans are old", additionalInfo: "" },
+			{
+				tip: "Your grind is the wrong size",
+				additionalInfo:
+					"if your shot takes longer than 25 seconds to pull your grind is too fine. If it takes less than 20 seconds to pull, then the grinds are too coarse.",
+				link: "https://www.roastycoffee.com/no-crema-on-espresso/",
+			},
+			{
+				tip: "Your beans are old",
+				additionalInfo:
+					"Stale coffee beans have been exposed to oxygen, thus breaking down the oils that give high-quality coffee its flavor.",
+				link: "https://www.businessinsider.com/why-coffee-gets-stale-when-sitting-out-oxygenation-2015-9?r=MX&IR=T",
+			},
 		];
 	} else if (description === "Taste" && option === "Bitter") {
 		output = [
