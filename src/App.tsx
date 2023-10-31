@@ -14,7 +14,7 @@ function App() {
 		<div className="App">
 			<h1>Coffee Fix</h1>
 			<div className="controls">
-				<h4>Can you control the:</h4>
+				{/* <h4>Can you control the:</h4>
 				<FormGroup>
 					<FormControlLabel
 						className="checkbox"
@@ -24,7 +24,7 @@ function App() {
 							setTemp(!temp);
 						}}
 					/>
-				</FormGroup>
+				</FormGroup> */}
 			</div>
 			<CoffeeForm />
 		</div>
