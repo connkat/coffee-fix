@@ -1,5 +1,11 @@
+.DropdownSelect {
+	position: relative;
+	display: inline-block;
+}
 .formControl {
 	width: 30vh;
+	position: fixed;
+	z-index: 1;
 }
 
 /* ////   Mobile   //// */

@@ -16,9 +16,11 @@ type selectProps = {
 
 function DropdownSelect(props: selectProps) {
 	return (
-		<div className="DropdownSelect">
+		<div className="DropdownSelect" style={{ zIndex: 1000 }}>
 			<FormControl error={props.error} className="formControl">
-				<InputLabel id="demo-simple-select-label">Select One</InputLabel>
+				<InputLabel id="demo-simple-select-label" z-index="1">
+					Select One
+				</InputLabel>
 				<Select
 					labelId="demo-simple-select-label"
 					id="demo-simple-select"
