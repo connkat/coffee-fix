@@ -6,4 +6,4 @@ Project made to demonstrate a striaght forward way to use the most common React 
 
 [Check out the project here!](https://coffee-fix.netlify.app/)
 
-V2 to be released in summer 2023
+[Coffee Animation credit](https://codingartistweb.com/2021/08/coffee-machine-css-animation/)
