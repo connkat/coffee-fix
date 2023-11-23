@@ -4,11 +4,12 @@
 	background-color: #efb54a;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-
 .instructions {
 	position: absolute;
-	top: 68vh;
-	left: 93vh;
+	top: 60%;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 .element {
@@ -74,7 +75,7 @@ h1 {
 
 @media only screen and (max-width: 600px) {
 	.App {
-		background-size: 250% 100%;
+		/* background-size: 250% 100%; */
 	}
 	.main {
 		flex-direction: column;
@@ -88,4 +89,8 @@ h1 {
 		background-color: white;
 		opacity: 0.7;
 	}
-}
+
+	.instructions {
+		top: 75%;
+	}
+} 

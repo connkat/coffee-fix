@@ -28,7 +28,7 @@ function App() {
 						<TextAnimation />
 						<CoffeeAnimation />
 						<div className="instructions">
-							<h2>Click anywhere to begin</h2>
+							<h2>Pull your shot to begin</h2>
 						</div>
 					</>
 				) : (
