@@ -4,16 +4,17 @@
 	background-color: #efb54a;
 	font-family: "Yanone Kaffeesatz", sans-serif;
 }
+
+.MainForm {
+	display: flex;
+	flex-direction: row;
+}
+
 .instructions {
 	position: absolute;
 	top: 70%;
 	left: 0;
 	right: 0;
-	margin: auto;
-}
-
-.element {
-	width: 40%;
 	margin: auto;
 }
 
@@ -53,7 +54,6 @@ h1 {
 	z-index: 999;
 	display: flex;
 	flex-direction: column;
-
 	background-color: white;
 	border: 2px solid black;
 	border-radius: 5px;
@@ -72,10 +72,14 @@ h1 {
 	display: none;
 }
 
+.tongue-tip {
+	width: 80%;
+	position: absolute;
+	bottom: 10%;
+	left: 10%
+}
+
 @media only screen and (max-width: 600px) {
-	.App {
-		/* background-size: 250% 100%; */
-	}
 	.main {
 		flex-direction: column;
 		align-items: center;
@@ -87,9 +91,5 @@ h1 {
 		border-radius: 5px;
 		background-color: white;
 		opacity: 0.7;
-	}
-
-	.instructions {
-		top: 75%;
 	}
 }

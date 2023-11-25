@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 import "./App.css";
-import CoffeeAnimation from "./components/CoffeeAnimation";
 import CoffeeForm from "./components/CoffeeForm";
-import TextAnimation from "./components/TextAnimation";
+import LandingPage from "./components/LandingPage/LandingPage";
 
 import tongueChart from "./images/tongue.jpeg";
 
@@ -24,35 +23,28 @@ function App() {
 		<div className="App">
 			<div onClick={hideMachine}>
 				{loading ? (
-					<>
-						<TextAnimation />
-						<CoffeeAnimation />
-						<div className="instructions">
-							<h2>Pull your shot to begin</h2>
-						</div>
-					</>
+					<LandingPage />
 				) : (
-					<div>
-						<div className={tongue ? "tongue-chart" : "hidden"}>
-							<button className="tongue-btn" onClick={onTongueClick}>
-								X
-							</button>
-							<img
-								src={tongueChart}
-								alt="tongue chart"
-								className="tongue-img"
-							/>
-						</div>
-						<div className="element">
-							<div className="controls"></div>
+					<>
+						<div className="FormBody">
 							<CoffeeForm />
-							<div>
+							<div className="tongue-tip" style={{ top: "75%" }}>
 								Not sure how to tell the difference between bitter and sour
 								taste? Check out{" "}
 								<button onClick={onTongueClick}>this chart</button>!
 							</div>
+							<div className={tongue ? "tongue-chart" : "hidden"}>
+								<button className="tongue-btn" onClick={onTongueClick}>
+									X
+								</button>
+								<img
+									src={tongueChart}
+									alt="tongue chart"
+									className="tongue-img"
+								/>
+							</div>
 						</div>
-					</div>
+					</>
 				)}
 			</div>
 		</div>
