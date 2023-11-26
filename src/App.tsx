@@ -9,7 +9,6 @@ export default function App() {
 
 	const hideMachine = () => {
 		setLoading(false);
-		console.log("this");
 	};
 
 	return (

@@ -1,8 +1,6 @@
-type TipObj = {
-	tip: string;
-	additionalInfo: string;
-	link?: string;
-};
+import { TipObj } from "./types";
+
+export const issues = ["Pour Time", "Pressure", "Crema", "Taste"];
 
 const options1 = ["Too slow", "Too fast"];
 const options2 = ["Too high", "Too low"];

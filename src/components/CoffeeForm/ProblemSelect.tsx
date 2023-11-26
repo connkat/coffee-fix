@@ -1,14 +1,15 @@
 import { FormEvent, useState } from "react";
 
-import { SelectChangeEvent } from "@mui/material/Select";
-import DropdownSelect from "./DropdownSelect";
-import Button from "@mui/material/Button";
-
 // import Infotip from "./Infotip";
 import TipModal from "../TipModal";
 
-import { findSolutions, selectionOptions } from "../../lib/helperFunctions";
-
+import {
+	findSolutions,
+	selectionOptions,
+	issues,
+} from "../../lib/helperFunctions";
+import { getListItemSecondaryActionClassesUtilityClass } from "@mui/material";
+import SelectMenu from "./SelectMenu";
 
 export default function ProblemSelect() {
 	const [issue, setIssue] = useState("");
@@ -21,11 +22,11 @@ export default function ProblemSelect() {
 	]);
 	const [error, setError] = useState(false);
 
-	const handleIssueChange = (e: SelectChangeEvent) => {
+	const handleIssueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setIssue(e.target.value);
 	};
 
-	const handleDescriptionChange = (e: SelectChangeEvent) => {
+	const handleDescriptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setDescription(e.target.value);
 	};
 
@@ -40,29 +41,17 @@ export default function ProblemSelect() {
 			<form>
 				<div className="form">
 					<h3>My</h3>
-					<DropdownSelect
-						value={issue}
-						handleChange={handleIssueChange}
-						options={["Pour Time", "Pressure", "Crema", "Taste"]}
-						error={error}
-					/>
+					<SelectMenu options={issues} onChange={handleIssueChange} />
 					<h3>is</h3>
-					<DropdownSelect
-						value={description}
-						handleChange={handleDescriptionChange}
+					<SelectMenu
 						options={selectionOptions(issue)}
-						error={error}
+						onChange={handleDescriptionChange}
 					/>
 				</div>
 			</form>
-			<Button
-				type="submit"
-				color="info"
-				variant="outlined"
-				onClick={handleSubmit}
-			>
+			<button type="submit" color="info" onClick={handleSubmit}>
 				What is wrong?
-			</Button>
+			</button>
 			<div className="solution">
 				<TipModal tips={solutions} />
 				{/* <Infotip tips={solutions} /> */}
