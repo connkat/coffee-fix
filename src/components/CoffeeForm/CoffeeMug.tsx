@@ -1,9 +1,9 @@
-import "./coffeeCup.css";
+import "./coffeeMug.css";
 
-export default function CoffeeCup() {
+export default function CoffeeMug() {
 	return (
-		<div className="container">
-			<div className="cup">
+		<div className="coffee-mug-container">
+			<div className="mug">
 				<div className="bubble bubble-1"></div>
 				<div className="bubble bubble-2"></div>
 				<div className="bubble bubble-3"></div>

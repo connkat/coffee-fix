@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import tongueChart from "../images/tongue.jpeg";
+import tongueChart from "../../images/tongue.jpeg";
 
 import "./tongueTip.css";
 

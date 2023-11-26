@@ -2,8 +2,28 @@
 	text-align: center;
 	padding-top: 18vh;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-direction: row;
+	width: 90%;
+	height: 75vh;
+	margin: auto;
+}
+
+.CoffeeForm__left-panel {
+	width: 33%;
+	position: relative;
+}
+.tongue-tip {
+	position: absolute;
+	bottom: 10;
+	left: 10;
+}
+
+.CoffeeForm__centre-panel {
+	width: 33%;
+}
+
+.CoffeeForm__right-panel {
+	width: 33%;
 }
 
 .controls {

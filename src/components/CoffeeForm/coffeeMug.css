@@ -1,12 +1,5 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-body {
-	background-color: #faf0ca;
-}
-.cup {
+
+.mug {
 	height: 210px;
 	width: 220px;
 	border: 10px solid #030303;
@@ -18,14 +11,14 @@ body {
 	background: url("../../images/coffee-img-1.svg"), url("../../images/coffee-img-2.svg");
 	background-position: 0 0, 0 0;
 	background-repeat: repeat-x;
-	animation: coffee 4s infinite linear;
+	animation: mug 4s infinite linear;
 }
-@keyframes coffee {
+@keyframes mug {
 	100% {
 		background-position: -100% 0, -100% 0;
 	}
 }
-.cup:before {
+.mug:before {
 	content: "";
 	position: absolute;
 	height: 80px;
@@ -36,7 +29,7 @@ body {
 	top: 30px;
 	border-radius: 0 30px 80px 0;
 }
-.cup:after {
+.mug:after {
 	position: absolute;
 	content: "";
 	height: 10px;
