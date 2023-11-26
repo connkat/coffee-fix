@@ -1,8 +1,6 @@
-import "./coffeeAnimation.css";
-
 export default function CoffeeAnimation() {
 	return (
-		<div className="container">
+		<div className="coffee-animation-container">
 			<div className="upper">
 				<div className="timer"></div>
 				<div className="upper-btn"></div>

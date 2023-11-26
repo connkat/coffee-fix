@@ -2,7 +2,7 @@ import "./textAnimation.css";
 
 export default function TextAnimation() {
 	return (
-		<div className="text-container">
+		<div className="text-animation-container">
 			<span>C</span>
 			<span>o</span>
 			<span>f</span>

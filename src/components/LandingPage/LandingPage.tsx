@@ -1,6 +1,8 @@
 import CoffeeAnimation from "./CoffeeAnimation";
 import TextAnimation from "./TextAnimation";
 
+import "./landingPage.css";
+
 function LandingPage() {
 	return (
 		<div className="LandingPage">

@@ -5,8 +5,6 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { FormHelperText } from '@mui/material';
 
-import "./dropdownSelect.css";
-
 type selectProps = {
 	value: string;
 	handleChange: (e: SelectChangeEvent) => void;
