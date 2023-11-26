@@ -1,5 +1,3 @@
-import "./textAnimation.css";
-
 export default function TextAnimation() {
 	return (
 		<div className="text-animation-container">

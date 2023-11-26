@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import CoffeeForm from "./components/CoffeeForm/CoffeeForm";
 import LandingPage from "./components/LandingPage/LandingPage";
-import Tip from "./components/Tips";
+import TongueTip from "./components/TongueTip";
 
 export default function App() {
 	const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ export default function App() {
 				) : (
 					<div className="FormBody">
 						<CoffeeForm />
-						<Tip />
+						<TongueTip />
 					</div>
 				)}
 			</div>

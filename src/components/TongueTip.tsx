@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import tongueChart from "../images/tongue.jpeg";
 
-import "./tips.css";
+import "./tongueTip.css";
 
 export default function Tip() {
 	const [tongue, setTongue] = useState(false);
@@ -12,7 +12,7 @@ export default function Tip() {
 	};
 
 	return (
-		<div className="Tip">
+		<div className="TongueTip">
 			<div className="tongue-tip" style={{ top: "75%" }}>
 				Not sure how to tell the difference between bitter and sour taste? Check
 				out <button onClick={onTongueClick}>this chart</button>!
