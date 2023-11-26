@@ -1,24 +1,26 @@
 import { FormEvent, useState } from "react";
 
-import Infotip from "./Infotip";
 import Solution from "./Solution";
 
-import {
-	findSolutions,
-	selectionOptions,
-	issues,
-} from "../../lib/helperFunctions";
+import { selectionOptions, issues } from "../../lib/helperFunctions";
 import SelectMenu from "./SelectMenu";
+import { TipObj } from "../../lib/types";
 
-export default function ProblemSelect() {
-	const [issue, setIssue] = useState("");
-	const [description, setDescription] = useState("");
-	const [solutions, setSolutions] = useState([
-		{
-			tip: "",
-			additionalInfo: "",
-		},
-	]);
+type ProblemSelectProps = {
+	issue: string;
+	setIssue: (issue: string) => void;
+	setDescription: (description: string) => void;
+	handleSubmit: (e: FormEvent) => void;
+	solutions: TipObj[];
+};
+
+export default function ProblemSelect({
+	issue,
+	setDescription,
+	setIssue,
+	handleSubmit,
+	solutions,
+}: ProblemSelectProps) {
 	const [error, setError] = useState(false);
 
 	const handleIssueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -27,12 +29,6 @@ export default function ProblemSelect() {
 
 	const handleDescriptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setDescription(e.target.value);
-	};
-
-	const handleSubmit = (e: FormEvent) => {
-		e.preventDefault();
-		setError(!description);
-		setSolutions(findSolutions(issue, description));
 	};
 
 	return (
@@ -53,7 +49,6 @@ export default function ProblemSelect() {
 			</button>
 			<div className="solution">
 				<Solution solutions={solutions} />
-				<Infotip explanations={solutions} />
 			</div>
 		</div>
 	);

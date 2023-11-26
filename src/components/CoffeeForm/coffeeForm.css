@@ -38,6 +38,12 @@
 .CoffeeForm__right-panel {
 	width: 33%;
 }
+
+.SelectMenu{
+	text-align:center;
+	align-self:center;
+	padding: 1vh;
+}
 .controls {
 	display: flex;
 	justify-content: center;

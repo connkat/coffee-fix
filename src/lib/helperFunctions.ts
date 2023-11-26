@@ -90,13 +90,13 @@ export function findSolutions(
 		];
 	} else if (description === "Taste" && option === "Bitter") {
 		output = [
-			{ tip: "Your grind is too fine", additionalInfo: "" },
-			{ tip: "You are using too much coffee", additionalInfo: "" },
+			{ tip: "Your grind is too fine", additionalInfo: "info" },
+			{ tip: "You are using too much coffee", additionalInfo: "info" },
 		];
 	} else if (description === "Taste" && option === "Sour") {
 		output = [
-			{ tip: "Your grind is too coarse", additionalInfo: "" },
-			{ tip: "You are not using enough coffee", additionalInfo: "" },
+			{ tip: "Your grind is too coarse", additionalInfo: "info" },
+			{ tip: "You are not using enough coffee", additionalInfo: "info" },
 		];
 	} else return [];
 
