@@ -3,5 +3,3 @@ export type TipObj = {
 	additionalInfo: string;
 	link?: string;
 };
-
-export type Option = { value: string; label: string };

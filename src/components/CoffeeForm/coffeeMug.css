@@ -5,7 +5,7 @@
 	border: 10px solid #030303;
 	position: absolute;
 	transform: translate(-50%, -50%);
-	top: 50%;
+	top: 15%;
 	left: 50%;
 	border-radius: 20px 20px 60px 60px;
 	background: url("../../images/coffee-img-1.svg"), url("../../images/coffee-img-2.svg");
@@ -42,7 +42,7 @@
 .bubble {
 	height: 15px;
 	width: 15px;
-	background-color: #fbbe08;
+	background-color: #EADDCA;
 	border-radius: 50%;
 	position: absolute;
 	animation: bubbles forwards infinite;

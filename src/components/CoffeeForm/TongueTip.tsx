@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import tongueChart from "../../images/tongue.jpeg";
 
-import "./tongueTip.css";
-
 export default function Tip() {
 	const [tongue, setTongue] = useState(false);
 

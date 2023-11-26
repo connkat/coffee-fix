@@ -1,21 +1,34 @@
 .CoffeeForm {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: auto;
+}
+
+.CoffeeForm__header {
+	font-size: 5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.CoffeeForm__header h4 {
+	align-self: center;
+	padding: 2vh 0 0 2vh;
+}
+
+.CoffeeForm__body {
 	text-align: center;
 	padding-top: 18vh;
 	display: flex;
 	flex-direction: row;
-	width: 90%;
-	height: 75vh;
-	margin: auto;
+	height: 50vh;
+	margin: 0 10vh;
 }
 
 .CoffeeForm__left-panel {
 	width: 33%;
 	position: relative;
-}
-.tongue-tip {
-	position: absolute;
-	bottom: 10;
-	left: 10;
 }
 
 .CoffeeForm__centre-panel {
@@ -25,7 +38,6 @@
 .CoffeeForm__right-panel {
 	width: 33%;
 }
-
 .controls {
 	display: flex;
 	justify-content: center;
@@ -41,14 +53,33 @@
 	padding-bottom: 3vh;
 }
 
-.DropdownSelect {
-	position: relative;
-	display: inline-block;
+.tongue-tip {
+	position: absolute;
+	bottom: 80%;
+	left: 10%;
+	width: 80%;
 }
-.formControl {
-	width: 30vh;
+
+.tongue-chart {
+	max-width: 40%;
 	position: fixed;
-	z-index: 1;
+	left: 30%;
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.tongue-img {
+	max-width: 40%;
+	align-self: center;
+}
+
+.tongue-btn {
+	align-self: flex-end;
+	font-size: 1.5rem;
 }
 
 /* ///   Mobile   ////  */

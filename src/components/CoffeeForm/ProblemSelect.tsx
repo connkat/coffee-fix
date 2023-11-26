@@ -1,14 +1,13 @@
 import { FormEvent, useState } from "react";
 
-// import Infotip from "./Infotip";
-import TipModal from "../TipModal";
+import Infotip from "./Infotip";
+import Solution from "./Solution";
 
 import {
 	findSolutions,
 	selectionOptions,
 	issues,
 } from "../../lib/helperFunctions";
-import { getListItemSecondaryActionClassesUtilityClass } from "@mui/material";
 import SelectMenu from "./SelectMenu";
 
 export default function ProblemSelect() {
@@ -53,8 +52,8 @@ export default function ProblemSelect() {
 				What is wrong?
 			</button>
 			<div className="solution">
-				<TipModal tips={solutions} />
-				{/* <Infotip tips={solutions} /> */}
+				<Solution solutions={solutions} />
+				<Infotip explanations={solutions} />
 			</div>
 		</div>
 	);
