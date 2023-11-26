@@ -12,6 +12,7 @@ type ProblemSelectProps = {
 	setDescription: (description: string) => void;
 	handleSubmit: (e: FormEvent) => void;
 	solutions: TipObj[];
+	handleExplanation: (e: React.MouseEvent<HTMLElement>) => void;
 };
 
 export default function ProblemSelect({
@@ -20,8 +21,9 @@ export default function ProblemSelect({
 	setIssue,
 	handleSubmit,
 	solutions,
+	handleExplanation,
 }: ProblemSelectProps) {
-	const [error, setError] = useState(false);
+	// const [error, setError] = useState(false);
 
 	const handleIssueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setIssue(e.target.value);
@@ -48,7 +50,7 @@ export default function ProblemSelect({
 				What is wrong?
 			</button>
 			<div className="solution">
-				<Solution solutions={solutions} />
+				<Solution solutions={solutions} handleExplanation={handleExplanation} />
 			</div>
 		</div>
 	);

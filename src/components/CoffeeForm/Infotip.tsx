@@ -1,18 +1,11 @@
-import { TipObj } from "../../lib/types";
-
 type Props = {
-	explanations: TipObj[];
+	explanation: string;
 };
 
-export default function Infotip({ explanations }: Props) {
+export default function Infotip({ explanation }: Props) {
 	return (
 		<div className="Infotip">
-			{explanations.map((explanation, index) => (
-				<div key={index} className="tip">
-					<p data-tooltip-id="coffee-fact">{explanation.additionalInfo}</p>
-					<a href={explanation.link}></a>
-				</div>
-			))}
+			<p>{explanation}</p>
 		</div>
 	);
 }
