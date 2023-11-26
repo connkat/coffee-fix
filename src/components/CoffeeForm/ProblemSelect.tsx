@@ -1,15 +1,15 @@
 import { FormEvent, useState } from "react";
-import "../App.css";
+// import "../App.css";
 import { SelectChangeEvent } from "@mui/material/Select";
 import DropdownSelect from "./DropdownSelect";
 import Button from "@mui/material/Button";
 
 // import Infotip from "./Infotip";
-import TipModal from "./TipModal";
+import TipModal from "../TipModal";
 
-import { findSolutions, selectionOptions } from "../lib/helperFunctions";
+import { findSolutions, selectionOptions } from "../../lib/helperFunctions";
 
-function CoffeeForm() {
+export default function ProblemSelect() {
 	const [issue, setIssue] = useState("");
 	const [description, setDescription] = useState("");
 	const [solutions, setSolutions] = useState([
@@ -35,7 +35,7 @@ function CoffeeForm() {
 	};
 
 	return (
-		<div className="Form">
+		<div className="ProblemSelect">
 			<form>
 				<div className="form">
 					<h3>My</h3>
@@ -69,5 +69,3 @@ function CoffeeForm() {
 		</div>
 	);
 }
-
-export default CoffeeForm;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
-import CoffeeForm from "./components/CoffeeForm";
+import CoffeeForm from "./components/CoffeeForm/CoffeeForm";
 import LandingPage from "./components/LandingPage/LandingPage";
 
 import tongueChart from "./images/tongue.jpeg";
