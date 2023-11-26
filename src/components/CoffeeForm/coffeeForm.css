@@ -1,3 +1,11 @@
+.CoffeeForm {
+	text-align: center;
+	padding-top: 18vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .controls {
 	display: flex;
 	justify-content: center;

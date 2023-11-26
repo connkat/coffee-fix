@@ -1,14 +1,20 @@
-/* TEXT ANIMATION */
-body {
+.LandingPage {
+	text-align: center;
 	padding-top: 18vh;
-	font-family: "Arial", sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* height: 100vh; */
 }
 
+.instructions {
+	position: absolute;
+	top: 75%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
 
+/* TEXT ANIMATION */
 .text-animation-container {
 	position: relative;
 	display: flex;
@@ -16,9 +22,8 @@ body {
 
 .text-animation-container span {
 	font-size: 6em;
-	color: white;
+	color: black;
 	font-weight: bold;
-	opacity: 0;
 	animation: drop 0.4s linear forwards;
 }
 
@@ -110,12 +115,12 @@ body {
 .coffee-animation-container {
 	max-height: 20vh;
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 	width: 350px;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	left: 50%;
-	top: 50%;
+	top: 40%;
 }
 .upper {
 	height: 0;
