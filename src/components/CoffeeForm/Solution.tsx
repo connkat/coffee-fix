@@ -1,11 +1,14 @@
 import { TipObj } from "../../lib/types";
 
-type Props = {
+type SolutionProps = {
 	solutions: TipObj[];
 	handleExplanation: (e: React.MouseEvent<HTMLElement>) => void;
 };
 
-export default function Solution({ solutions, handleExplanation }: Props) {
+export default function Solution({
+	solutions,
+	handleExplanation,
+}: SolutionProps) {
 	return (
 		<div className="Solution">
 			<div className="solutions">
