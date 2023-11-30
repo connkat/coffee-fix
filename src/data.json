@@ -2,155 +2,65 @@
 	{
 		"id": 1,
 		"tip": "Not enough coffee",
-		"additionalInfo": "1- explanation coming soon!",
-		"link": ""
+		"additionalInfo": "If you're not using enough ground coffee for the size of your portafilter basket, the brew time will be too quick. ",
+		"link": "https://www.rumblecoffee.com.au/blogs/coffee-brewing-guides/why-is-my-espresso-extracting-too-quickly#:~:text=GRIND%20SIZE,-There's%20two%20main&text=If%20your%20coffee%20beans%20are,down%20your%20espresso%20shot%20time."
 	},
 	{
 		"id": 2,
 		"tip": "Your grind is too coarse",
-		"additionalInfo": "2- explanation coming soon!",
-		"link": ""
+		"additionalInfo": "If your coffee beans are ground too coarse, the water can pass through the coffee grounds far too quickly, resulting in an under-extracted coffee. By grinding your coffee finer, it can resist the flow of the hot water more effectively, and slow down your espresso shot time.",
+		"link": "https://www.rumblecoffee.com.au/blogs/coffee-brewing-guides/why-is-my-espresso-extracting-too-quickly#:~:text=GRIND%20SIZE,-There's%20two%20main&text=If%20your%20coffee%20beans%20are,down%20your%20espresso%20shot%20time."
 	},
 	{
 		"id": 3,
 		"tip": "Your tamp is too light",
-		"additionalInfo": "3- explanation coming soon!",
-		"link": ""
+		"additionalInfo": "When your tamp is too light, it creates inconsistencies in the puck, causing channeling and for the water to run through too quickly.",
+		"link": "https://coffeebros.com/blogs/coffee/top-10-reasons-your-espresso-shot-pulls-too-slow-or-too-fast#s-b72ccc53-934c-4b0d-8bc5-b0752d33a7b8"
 	},
 	{
 		"id": 4,
 		"tip": "Your temperature is too hot",
-		"additionalInfo": "4- explanation coming soon!",
-		"link": ""
+		"additionalInfo": "The hotter the water, the quicker it is to extract compounds such as oils, acids, and caffeine. ",
+		"link": "https://www.coffeebean.com/blog/our-coffee/water-and-coffee-understanding-how-temperature-affects-your-cup"
 	},
 	{
 		"id": 5,
 		"tip": "Too much coffee",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
+		"additionalInfo": "If you overfill your machine with coffee, the water will take longer than it should to dispense through the grounds. ",
+		"link": "https://vdkrogt.com/2018/08/09/4-reasons-your-espresso-is-dispensing-too-slowly/"
 	},
 	{
 		"id": 6,
 		"tip": "Your grind is too fine",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
+		"additionalInfo": "If you grind your coffee too fine, the particles will fit too tightly together and prevent water from getting through at an adequate speed. ",
+		"link": "https://vdkrogt.com/2018/08/09/4-reasons-your-espresso-is-dispensing-too-slowly/"
 	},
 	{
 		"id": 7,
 		"tip": "Your tamp is too hard",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
+		"additionalInfo": "If your coffee is ground too fine, the water won't be able to get through which will cause your machine to choke and splutter.",
+		"link": "https://baristaandco.com/blogs/news/perfect-extraction-time-espresso"
 	},
 	{
 		"id": 8,
-		"tip": "You can temperature is too low",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 9,
-		"tip": "Not enough coffee",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
+		"tip": "Your temperature is too low",
+		"additionalInfo": "When coffee is under-extracted, it can cause a sour taste and lack of body. This flavor profile occurs because the oils aren’t extracted, leaving the coffee without body or sweetness and bitterness to provide balance.",
+		"link": "https://www.coffeebean.com/blog/our-coffee/water-and-coffee-understanding-how-temperature-affects-your-cup"
 	},
 	{
 		"id": 10,
-		"tip": "Your grind is too coarse",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 11,
-		"tip": "Your tamp is too light",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 12,
-		"tip": "Your temperature is too hot",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 13,
-		"tip": "Too much coffee",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 14,
-		"tip": "Your grind is too fine",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 15,
-		"tip": "Your tamp is too hard",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 16,
-		"tip": "Your temperature is too low",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 17,
-		"tip": "Your grind is too fine",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 18,
-		"tip": "Your tamp is too hard.",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 19,
-		"tip": "Your grind is too coarse",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 20,
-		"tip": "Your tamp is too light",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 21,
 		"tip": "Your grind is the wrong size",
 		"additionalInfo": "if your shot takes longer than 25 seconds to pull your grind is too fine. If it takes less than 20 seconds to pull, then the grinds are too coarse.",
 		"link": "https://www.roastycoffee.com/no-crema-on-espresso/"
 	},
 	{
-		"id": 22,
+		"id": 11,
 		"tip": "Your beans are old",
 		"additionalInfo": "Stale coffee beans have been exposed to oxygen, thus breaking down the oils that give high-quality coffee its flavor.",
 		"link": "https://www.businessinsider.com/why-coffee-gets-stale-when-sitting-out-oxygenation-2015-9?r=MX&IR=T"
 	},
 	{
-		"id": 23,
-		"tip": "Your grind is too fine",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 24,
-		"tip": "You are using too much coffee",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 25,
-		"tip": "Your grind is too coarse",
-		"additionalInfo": "explanation coming soon!",
-		"link": ""
-	},
-	{
-		"id": 26,
+		"id": 13,
 		"tip": "You are not using enough coffee",
 		"additionalInfo": "explanation coming soon!",
 		"link": ""

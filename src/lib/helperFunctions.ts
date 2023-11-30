@@ -58,15 +58,15 @@ export function findSolutions(
 			findSolutionFromId(8),
 		];
 	} else if (description === "Pressure" && option === "Too high") {
-		output = [findSolutionFromId(17), findSolutionFromId(18)];
+		output = [findSolutionFromId(6), findSolutionFromId(7)];
 	} else if (description === "Pressure" && option === "Too low") {
-		output = [findSolutionFromId(19), findSolutionFromId(20)];
+		output = [findSolutionFromId(2), findSolutionFromId(20)];
 	} else if (description === "Crema") {
-		output = [findSolutionFromId(21), findSolutionFromId(22)];
+		output = [findSolutionFromId(10), findSolutionFromId(11)];
 	} else if (description === "Taste" && option === "Bitter") {
-		output = [findSolutionFromId(23), findSolutionFromId(124)];
+		output = [findSolutionFromId(6), findSolutionFromId(5)];
 	} else if (description === "Taste" && option === "Sour") {
-		output = [findSolutionFromId(25), findSolutionFromId(26)];
+		output = [findSolutionFromId(2), findSolutionFromId(13)];
 	} else return [];
 
 	return output;
@@ -76,3 +76,10 @@ export function findTip(id: string): string {
 	const explanation = data.find((tip) => tip.id.toString() === id)!;
 	return explanation.additionalInfo;
 }
+
+export const generalTips = [
+	"Pull time should be between 25-32 seconds.",
+	"Tamp should be an even 30 lbs of pressure.",
+	"Shot weight should be 2x the weight of your dry grinds.",
+	"The hotter the water, the quicker it is to extract compounds such as oils, acids, and caffeine. Each of these substances has a different impact on the coffee’s flavor, and at a higher temperature, it’s tougher to control the rate of extraction.",
+];
