@@ -60,13 +60,13 @@ export function findSolutions(
 	} else if (description === "Pressure" && option === "Too high") {
 		output = [findSolutionFromId(6), findSolutionFromId(7)];
 	} else if (description === "Pressure" && option === "Too low") {
-		output = [findSolutionFromId(2), findSolutionFromId(20)];
+		output = [findSolutionFromId(2), findSolutionFromId(3)];
 	} else if (description === "Crema") {
 		output = [findSolutionFromId(10), findSolutionFromId(11)];
 	} else if (description === "Taste" && option === "Bitter") {
 		output = [findSolutionFromId(6), findSolutionFromId(5)];
 	} else if (description === "Taste" && option === "Sour") {
-		output = [findSolutionFromId(2), findSolutionFromId(13)];
+		output = [findSolutionFromId(2), findSolutionFromId(1)];
 	} else return [];
 
 	return output;
