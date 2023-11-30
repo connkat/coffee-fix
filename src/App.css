@@ -10,4 +10,16 @@ body {
 	display: none;
 }
 
+button {
+	all: unset;
+	text-decoration: underline;
+}
 
+button:hover {
+	cursor: pointer;
+}
+
+select {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 2vh;
+}

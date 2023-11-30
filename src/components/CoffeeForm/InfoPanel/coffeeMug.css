@@ -8,7 +8,7 @@
 	top: 15%;
 	left: 50%;
 	border-radius: 20px 20px 60px 60px;
-	background: url("../../images/coffee-img-1.svg"), url("../../images/coffee-img-2.svg");
+	background: url("../../../images/coffee-img-1.svg"), url("../../../images/coffee-img-2.svg");
 	background-position: 0 0, 0 0;
 	background-repeat: repeat-x;
 	animation: mug 4s infinite linear;

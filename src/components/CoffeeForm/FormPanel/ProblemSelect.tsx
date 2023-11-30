@@ -1,18 +1,14 @@
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 
-import Solution from "./Solution";
-
-import { selectionOptions, issues } from "../../lib/helperFunctions";
+import { selectionOptions, issues } from "../../../lib/helperFunctions";
 import SelectMenu from "./SelectMenu";
-import { TipObj } from "../../lib/types";
+import "./formPanel.css";
 
 type ProblemSelectProps = {
 	issue: string;
 	setIssue: (issue: string) => void;
 	setDescription: (description: string) => void;
 	handleSubmit: (e: FormEvent) => void;
-	solutions: TipObj[];
-	handleExplanation: (e: React.MouseEvent<HTMLElement>) => void;
 };
 
 export default function ProblemSelect({
@@ -20,11 +16,7 @@ export default function ProblemSelect({
 	setDescription,
 	setIssue,
 	handleSubmit,
-	solutions,
-	handleExplanation,
 }: ProblemSelectProps) {
-	// const [error, setError] = useState(false);
-
 	const handleIssueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setIssue(e.target.value);
 	};
@@ -36,7 +28,7 @@ export default function ProblemSelect({
 	return (
 		<div className="ProblemSelect">
 			<form>
-				<div className="form">
+				<div className="ProblemSelect__form">
 					<h3>My</h3>
 					<SelectMenu options={issues} onChange={handleIssueChange} />
 					<h3>is</h3>
@@ -46,12 +38,13 @@ export default function ProblemSelect({
 					/>
 				</div>
 			</form>
-			<button type="submit" color="info" onClick={handleSubmit}>
-				What is wrong?
+			<button
+				type="submit"
+				className="ProblemSelect__button"
+				onClick={handleSubmit}
+			>
+				What might be wrong?
 			</button>
-			<div className="solution">
-				<Solution solutions={solutions} handleExplanation={handleExplanation} />
-			</div>
 		</div>
 	);
 }

@@ -3,10 +3,10 @@ import { TipObj } from "./types";
 
 export const issues = ["Pour Time", "Pressure", "Crema", "Taste"];
 
-const options1 = ["Too slow", "Too fast"];
-const options2 = ["Too high", "Too low"];
-const options3 = ["Non existent"];
-const options4 = ["Bitter", "Sour"];
+const options1 = ["Select", "Too slow", "Too fast"];
+const options2 = ["Select", "Too high", "Too low"];
+const options3 = ["Select", "Non existent"];
+const options4 = ["Select", "Bitter", "Sour"];
 
 export function selectionOptions(option: string): Array<string> {
 	if (option === "Pour Time") {
@@ -62,7 +62,11 @@ export function findSolutions(
 	} else if (description === "Pressure" && option === "Too low") {
 		output = [findSolutionFromId(2), findSolutionFromId(3)];
 	} else if (description === "Crema") {
-		output = [findSolutionFromId(10), findSolutionFromId(11)];
+		output = [
+			findSolutionFromId(10),
+			findSolutionFromId(11),
+			findSolutionFromId(12),
+		];
 	} else if (description === "Taste" && option === "Bitter") {
 		output = [findSolutionFromId(6), findSolutionFromId(5)];
 	} else if (description === "Taste" && option === "Sour") {
@@ -72,7 +76,7 @@ export function findSolutions(
 	return output;
 }
 
-export function findTip(id: string): string {
+export function findSolution(id: string): string {
 	const explanation = data.find((tip) => tip.id.toString() === id)!;
 	return explanation.additionalInfo;
 }

@@ -1,3 +1,5 @@
+import "./formPanel.css";
+
 type SelectProps = {
 	options: string[];
 	onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -6,16 +8,14 @@ type SelectProps = {
 export default function SelectMenu({ options, onChange }: SelectProps) {
 	return (
 		<div className="SelectMenu">
-			<select onChange={onChange}>
+			<select onChange={onChange} className="SelectMenu__options">
+				<option hidden value="select">
+					Select
+				</option>
 				{options.map((option, index) => (
-					<>
-						<option hidden key="default" selected={true} value="select">
-							Select
-						</option>
-						<option key={index} value={option}>
-							{option}
-						</option>
-					</>
+					<option key={index} value={option}>
+						{option}
+					</option>
 				))}
 			</select>
 		</div>

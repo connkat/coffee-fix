@@ -56,7 +56,13 @@
 	{
 		"id": 11,
 		"tip": "Your beans are old",
-		"additionalInfo": "Stale coffee beans have been exposed to oxygen, thus breaking down the oils that give high-quality coffee its flavor.",
+		"additionalInfo": "Stale coffee beans have been exposed to oxygen, thus breaking down the oils that give high-quality coffee its flavor.Without those oils, crema cannot be produced. ",
 		"link": "https://www.businessinsider.com/why-coffee-gets-stale-when-sitting-out-oxygenation-2015-9?r=MX&IR=T"
+	},
+	{
+		"id": 12,
+		"tip": "Not enough pressure",
+		"additionalInfo": "Try tamping harder to increase the pressure.",
+		"link": "https://coffeeza.com/blogs/coffeeza-blog/why-does-my-espresso-have-no-crema#:~:text=In%20regular%20espresso%20machines%2C%20using,be%20finer%20than%20table%20salt."
 	}
 ]

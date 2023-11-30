@@ -1,11 +1,10 @@
 import { useState, FormEvent } from "react";
 
-import CoffeeMug from "./CoffeeMug";
-import ProblemSelect from "./ProblemSelect";
-import TongueTip from "./TongueTip";
-import Infotip from "./Infotip";
+import FormPanel from "./FormPanel/FormPanel";
+import InfoPanel from "./InfoPanel/InfoPanel";
+import TipPanel from "./TipPanel/TipPanel";
 
-import { findSolutions, findTip } from "../../lib/helperFunctions";
+import { findSolutions, findSolution } from "../../lib/helperFunctions";
 
 import "./coffeeForm.css";
 
@@ -29,7 +28,7 @@ export default function CoffeeForm() {
 	const handleExplanation = (e: React.MouseEvent<HTMLElement>) => {
 		const target = e.target as HTMLButtonElement;
 
-		setExplanation(findTip(target.value));
+		setExplanation(findSolution(target.value));
 	};
 	return (
 		<div className="CoffeeForm">
@@ -39,11 +38,10 @@ export default function CoffeeForm() {
 			</div>
 			<div className="CoffeeForm__body">
 				<div className="CoffeeForm__left-panel">
-					<CoffeeMug />
-					<TongueTip />
+					<InfoPanel />
 				</div>
 				<div className="CoffeeForm__centre-panel">
-					<ProblemSelect
+					<FormPanel
 						issue={issue}
 						setDescription={setDescription}
 						setIssue={setIssue}
@@ -53,8 +51,7 @@ export default function CoffeeForm() {
 					/>
 				</div>
 				<div className="CoffeeForm__right-panel">
-					<h2>Tips</h2>
-					<Infotip explanation={explanation} />
+					<TipPanel explanation={explanation} />
 				</div>
 			</div>
 		</div>
