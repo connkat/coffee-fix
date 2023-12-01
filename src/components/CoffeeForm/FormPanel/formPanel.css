@@ -1,0 +1,63 @@
+.ProblemSelect__form {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 0vh;
+	padding-bottom: 3vh;
+	font-size: 3vh;
+}
+
+.right-arrow {
+	max-width: 1.5vh;
+}
+
+.ProblemSelect__button {
+	all: revert;
+	background-color: rgba(238, 192, 6, 0.926);
+	border-radius: 1vh;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 3vh;
+}
+
+.SelectMenu {
+	text-align: center;
+	align-self: center;
+	padding: 1vh;
+}
+
+.SelectMenu__options {
+	font-size: 3vh;
+}
+
+.Solution {
+	margin-top: 4vh;
+	max-width: 50%;
+	margin-left: 30%;
+}
+
+.Solution li{
+	text-align: left;
+}
+
+.Solution__buttons {
+	line-height: 1.5;
+	font-size: 3vh;
+}
+
+.Solution__container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.Solution {
+		max-width: 100%;
+		margin-left: 0%;
+	}
+
+	.Solution__container p {
+		visibility: hidden;
+	}
+}

@@ -1,95 +1,25 @@
-.App {
-	text-align: center;
-	max-height: 20vh;
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
 	background-color: #efb54a;
 	font-family: "Yanone Kaffeesatz", sans-serif;
-}
-
-.MainForm {
-	display: flex;
-	flex-direction: row;
-}
-
-.instructions {
-	position: absolute;
-	top: 70%;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-
-.controls {
-	display: flex;
-	justify-content: center;
-	margin-top: 25vh;
-	align-items: center;
-}
-
-.checkbox {
-	padding-left: 2vh;
-}
-
-.form {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding-top: 0vh;
-	padding-bottom: 3vh;
-}
-
-h3 {
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-h1 {
-	margin-top: 0;
-	background-color: white;
-}
-
-.tongue-chart {
-	max-width: 40%;
-	position: fixed;
-	left: 30%;
-	z-index: 999;
-	display: flex;
-	flex-direction: column;
-	background-color: white;
-	border: 2px solid black;
-	border-radius: 5px;
-}
-.tongue-img {
-	max-width: 40%;
-	align-self: center;
-}
-
-.tongue-btn {
-	align-self: flex-end;
-	font-size: 1.5rem;
 }
 
 .hidden {
 	display: none;
 }
 
-.tongue-tip {
-	width: 80%;
-	position: absolute;
-	bottom: 10%;
-	left: 10%
+button {
+	all: unset;
+	text-decoration: underline;
 }
 
-@media only screen and (max-width: 600px) {
-	.main {
-		flex-direction: column;
-		align-items: center;
-		padding-top: 20vh;
-		width: 100%;
-		text-shadow: 2px 2px white;
-	}
-	.solution {
-		border-radius: 5px;
-		background-color: white;
-		opacity: 0.7;
-	}
+button:hover {
+	cursor: pointer;
+}
+
+select {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 2vh;
 }

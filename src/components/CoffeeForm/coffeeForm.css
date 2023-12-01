@@ -1,0 +1,62 @@
+.CoffeeForm {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: auto;
+}
+
+.CoffeeForm__header {
+	font-size: 5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.CoffeeForm__header h4 {
+	align-self: center;
+	padding: 2vh 0 0 2vh;
+}
+
+.CoffeeForm__body {
+	text-align: center;
+	padding-top: 18vh;
+	display: flex;
+	flex-direction: row;
+	height: 50vh;
+	margin: 0 10vh;
+}
+
+.CoffeeForm__left-panel {
+	width: 33%;
+	position: relative;
+}
+
+.CoffeeForm__centre-panel {
+	width: 33%;
+}
+
+.CoffeeForm__right-panel {
+	width: 33%;
+}
+
+/* ///   Mobile   ////  */
+
+@media only screen and (max-width: 600px) {
+	.CoffeeForm__body {
+		padding-top: 0vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.CoffeeForm__left-panel {
+		visibility: hidden;
+	}
+
+	.CoffeeForm__centre-panel {
+		width: 100%;
+	}
+
+	.CoffeeForm__right-panel {
+		width: 100%;
+	}
+}

@@ -1,8 +1,66 @@
-body {
-	max-height: 20vh;
-	padding: 0;
-	margin: 0;
-	background-color: #efb54a;
+.LandingPage {
+	text-align: center;
+	padding-top: 18vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.instructions {
+	position: absolute;
+	top: 75%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/* TEXT ANIMATION */
+.text-animation-container {
+	position: relative;
+	display: flex;
+}
+
+.text-animation-container span {
+	font-size: 6em;
+	color: black;
+	font-weight: bold;
+	animation: drop 0.4s linear forwards;
+}
+
+.text-animation-container span:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.text-animation-container span:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+.text-animation-container span:nth-child(4) {
+	animation-delay: 0.6s;
+}
+
+.text-animation-container span:nth-child(5) {
+	animation-delay: 0.8s;
+}
+
+.text-animation-container span:nth-child(6) {
+	animation-delay: 1s;
+}
+
+.text-animation-container span:nth-child(7) {
+	animation-delay: 1.2s;
+}
+
+.text-animation-container span:nth-child(8) {
+	animation-delay: 1.4s;
+}
+
+.text-animation-container span:nth-child(9) {
+	animation-delay: 1.6s;
+}
+
+.text-animation-container span:nth-child(10) {
+	animation-delay: 1.8s;
 }
 
 @keyframes drop {
@@ -28,14 +86,41 @@ body {
 	}
 }
 
+/* COFFEE ANIMATION */
+
+@keyframes drop {
+	0% {
+		transform: translateY(-200px) scaleY(0.9);
+	}
+	5% {
+		opacity: 0.7;
+	}
+	50% {
+		transform: translateY(0px) scaleY(1);
+		opacity: 1;
+	}
+	65% {
+		transform: translateY(-17px) scaleY(0.9);
+	}
+	75% {
+		transform: translateY(-22px) scaleY(0.9);
+	}
+	100% {
+		transform: translateY(0px) scaleY(1);
+		opacity: 1;
+	}
+}
+
 /* coffee machine */
-.container {
-	height: 350px;
+.coffee-animation-container {
+	max-height: 20vh;
+	padding: 0;
+	margin: 0;
 	width: 350px;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	left: 50%;
-	top: 50%;
+	top: 40%;
 }
 .upper {
 	height: 0;

@@ -1,13 +1,12 @@
-type TipObj = {
-	tip: string;
-	additionalInfo: string;
-	link?: string;
-};
+import data from "../data.json";
+import { TipObj } from "./types";
 
-const options1 = ["Too slow", "Too fast"];
-const options2 = ["Too high", "Too low"];
-const options3 = ["Non existent"];
-const options4 = ["Bitter", "Sour"];
+export const issues = ["Pour Time", "Pressure", "Crema", "Taste"];
+
+const options1 = ["Select", "Too slow", "Too fast"];
+const options2 = ["Select", "Too high", "Too low"];
+const options3 = ["Select", "Non existent"];
+const options4 = ["Select", "Bitter", "Sour"];
 
 export function selectionOptions(option: string): Array<string> {
 	if (option === "Pour Time") {
@@ -26,82 +25,65 @@ export function selectionOptions(option: string): Array<string> {
 
 let obj: TipObj[] = [];
 
+export function findSolutionFromId(id: number): TipObj {
+	const result = data.find((tip) => tip.id === id);
+	if (result) {
+		return result;
+	} else {
+		return {
+			id: 0,
+			tip: "No tip found",
+			additionalInfo: "explanation coming soon!",
+		};
+	}
+}
+
 export function findSolutions(
 	description: string,
 	option: string
-	// temp: boolean
 ): Array<TipObj> {
 	let output = obj;
 	if (description === "Pour Time" && option === "Too fast") {
-		return [
-			{
-				tip: "Not enough coffee",
-				additionalInfo: "test",
-			},
-			{ tip: "Your grind is too coarse", additionalInfo: "" },
-			{ tip: "Your tamp is too light", additionalInfo: "" },
-			{ tip: "Your temperature is too hot", additionalInfo: "" },
-		];
-	} else if (description === "Pour Time" && option === "Too slow") {
-		return [
-			{ tip: "Too much coffee", additionalInfo: "" },
-			{ tip: "Your grind is too fine", additionalInfo: "" },
-			{ tip: "Your tamp is too hard", additionalInfo: "" },
-			{
-				tip: "You can temperature is too low",
-				additionalInfo: "",
-			},
-		];
-	} else if (description === "Pour Time" && option === "Too fast") {
-		return [
-			{ tip: "Not enough coffee", additionalInfo: "" },
-			{ tip: "Your grind is too coarse", additionalInfo: "" },
-			{ tip: "Your tamp is too light", additionalInfo: "" },
-			{ tip: "Your temperature is too hot", additionalInfo: "" },
+		output = [
+			findSolutionFromId(1),
+			findSolutionFromId(2),
+			findSolutionFromId(3),
+			findSolutionFromId(4),
 		];
 	} else if (description === "Pour Time" && option === "Too slow") {
 		output = [
-			{ tip: "Too much coffee", additionalInfo: "" },
-			{ tip: "Your grind is too fine", additionalInfo: "" },
-			{ tip: "Your tamp is too hard", additionalInfo: "" },
-			{ tip: "Your temperature is too low", additionalInfo: "" },
+			findSolutionFromId(5),
+			findSolutionFromId(6),
+			findSolutionFromId(7),
+			findSolutionFromId(8),
 		];
 	} else if (description === "Pressure" && option === "Too high") {
-		output = [
-			{ tip: "Your grind is too fine", additionalInfo: "" },
-			{ tip: "Your tamp is too hard.", additionalInfo: "" },
-		];
+		output = [findSolutionFromId(6), findSolutionFromId(7)];
 	} else if (description === "Pressure" && option === "Too low") {
-		output = [
-			{ tip: "Your grind is too coarse", additionalInfo: "" },
-			{ tip: "Your tamp is too light", additionalInfo: "" },
-		];
+		output = [findSolutionFromId(2), findSolutionFromId(3)];
 	} else if (description === "Crema") {
 		output = [
-			{
-				tip: "Your grind is the wrong size",
-				additionalInfo:
-					"if your shot takes longer than 25 seconds to pull your grind is too fine. If it takes less than 20 seconds to pull, then the grinds are too coarse.",
-				link: "https://www.roastycoffee.com/no-crema-on-espresso/",
-			},
-			{
-				tip: "Your beans are old",
-				additionalInfo:
-					"Stale coffee beans have been exposed to oxygen, thus breaking down the oils that give high-quality coffee its flavor.",
-				link: "https://www.businessinsider.com/why-coffee-gets-stale-when-sitting-out-oxygenation-2015-9?r=MX&IR=T",
-			},
+			findSolutionFromId(10),
+			findSolutionFromId(11),
+			findSolutionFromId(12),
 		];
 	} else if (description === "Taste" && option === "Bitter") {
-		output = [
-			{ tip: "Your grind is too fine", additionalInfo: "" },
-			{ tip: "You are using too much coffee", additionalInfo: "" },
-		];
+		output = [findSolutionFromId(6), findSolutionFromId(5)];
 	} else if (description === "Taste" && option === "Sour") {
-		output = [
-			{ tip: "Your grind is too coarse", additionalInfo: "" },
-			{ tip: "You are not using enough coffee", additionalInfo: "" },
-		];
+		output = [findSolutionFromId(2), findSolutionFromId(1)];
 	} else return [];
 
 	return output;
 }
+
+export function findSolution(id: string): string {
+	const explanation = data.find((tip) => tip.id.toString() === id)!;
+	return explanation.additionalInfo;
+}
+
+export const generalTips = [
+	"Pull time should be between 25-32 seconds.",
+	"Tamp should be an even 30 lbs of pressure.",
+	"Shot weight should be 2x the weight of your dry grinds.",
+	"The hotter the water, the quicker it is to extract compounds such as oils, acids, and caffeine. Each of these substances has a different impact on the coffee’s flavor, and at a higher temperature, it’s tougher to control the rate of extraction.",
+];
