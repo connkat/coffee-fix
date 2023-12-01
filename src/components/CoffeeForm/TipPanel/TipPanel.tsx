@@ -1,7 +1,5 @@
 import Infotip from "./Infotip";
 
-import "../coffeeForm.css";
-
 type Props = {
 	explanation: string;
 };

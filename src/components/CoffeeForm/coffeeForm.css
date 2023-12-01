@@ -39,10 +39,24 @@
 	width: 33%;
 }
 
-
 /* ///   Mobile   ////  */
 
 @media only screen and (max-width: 600px) {
+	.CoffeeForm__body {
+		padding-top: 0vh;
+		display: flex;
+		flex-direction: column;
+	}
 
+	.CoffeeForm__left-panel {
+		visibility: hidden;
+	}
 
+	.CoffeeForm__centre-panel {
+		width: 100%;
+	}
+
+	.CoffeeForm__right-panel {
+		width: 100%;
+	}
 }

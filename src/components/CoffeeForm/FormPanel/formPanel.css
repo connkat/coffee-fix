@@ -29,7 +29,6 @@
 	font-size: 3vh;
 }
 
-
 .Solution {
 	margin-top: 4vh;
 	max-width: 50%;
@@ -51,3 +50,14 @@
 	align-items: flex-start;
 }
 
+
+@media only screen and (max-width: 600px) {
+	.Solution {
+		max-width: 100%;
+		margin-left: 0%;
+	}
+
+	.Solution__container p {
+		visibility: hidden;
+	}
+}
