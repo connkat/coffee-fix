@@ -14,6 +14,7 @@ type FormPanelProps = {
 	handleSubmit: (e: FormEvent) => void;
 	solutions: TipObj[];
 	handleExplanation: (e: React.MouseEvent<HTMLElement>) => void;
+	error?: string;
 };
 
 export default function FormPanel({
@@ -23,6 +24,7 @@ export default function FormPanel({
 	handleSubmit,
 	solutions,
 	handleExplanation,
+	error,
 }: FormPanelProps) {
 	return (
 		<div className="FormPanel">
@@ -31,6 +33,7 @@ export default function FormPanel({
 				setDescription={setDescription}
 				setIssue={setIssue}
 				handleSubmit={handleSubmit}
+				error={error}
 			/>
 			{solutions[0]?.id !== 0 ? (
 				<Solution solutions={solutions} handleExplanation={handleExplanation} />

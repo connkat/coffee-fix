@@ -9,7 +9,7 @@ type Props = {
 export default function TipPanel({ explanation }: Props) {
 	return (
 		<div className="TipPanel">
-			<h2>Tips</h2>
+			<h1>Tips</h1>
 			<Infotip explanation={explanation} />
 		</div>
 	);

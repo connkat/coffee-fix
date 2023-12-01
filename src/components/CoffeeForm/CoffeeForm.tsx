@@ -9,6 +9,7 @@ import { findSolutions, findSolution } from "../../lib/helperFunctions";
 import "./coffeeForm.css";
 
 export default function CoffeeForm() {
+	const [error, setError] = useState("");
 	const [issue, setIssue] = useState("");
 	const [description, setDescription] = useState("");
 	const [solutions, setSolutions] = useState([
@@ -22,7 +23,15 @@ export default function CoffeeForm() {
 
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
-		setSolutions(findSolutions(issue, description));
+		if (!description || description === "Select") {
+			setError("Please select a description");
+		} else {
+			setSolutions(findSolutions(issue, description));
+
+			if (solutions[0]?.id === 0) {
+				setError("");
+			}
+		}
 	};
 
 	const handleExplanation = (e: React.MouseEvent<HTMLElement>) => {
@@ -48,6 +57,7 @@ export default function CoffeeForm() {
 						handleSubmit={handleSubmit}
 						solutions={solutions}
 						handleExplanation={handleExplanation}
+						error={error}
 					/>
 				</div>
 				<div className="CoffeeForm__right-panel">

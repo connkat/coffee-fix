@@ -9,6 +9,7 @@ type ProblemSelectProps = {
 	setIssue: (issue: string) => void;
 	setDescription: (description: string) => void;
 	handleSubmit: (e: FormEvent) => void;
+	error?: string;
 };
 
 export default function ProblemSelect({
@@ -16,6 +17,7 @@ export default function ProblemSelect({
 	setDescription,
 	setIssue,
 	handleSubmit,
+	error,
 }: ProblemSelectProps) {
 	const handleIssueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setIssue(e.target.value);
@@ -25,12 +27,17 @@ export default function ProblemSelect({
 		setDescription(e.target.value);
 	};
 
+	function updateIssueChange(e: React.ChangeEvent<HTMLSelectElement>) {
+		setDescription("Select");
+		handleIssueChange(e);
+	}
+
 	return (
 		<div className="ProblemSelect">
 			<form>
 				<div className="ProblemSelect__form">
 					<h3>My</h3>
-					<SelectMenu options={issues} onChange={handleIssueChange} />
+					<SelectMenu options={issues} onChange={updateIssueChange} />
 					<h3>is</h3>
 					<SelectMenu
 						options={selectionOptions(issue)}
@@ -38,6 +45,9 @@ export default function ProblemSelect({
 					/>
 				</div>
 			</form>
+			{!error || error === "" ? null : (
+				<p className="ProblemSelect__error">{error}</p>
+			)}
 			<button
 				type="submit"
 				className="ProblemSelect__button"
