@@ -8,4 +8,4 @@ Project made to demonstrate a straight forward way to use the most common React 
 
 [Check out the project here](https://coffee-fix.net)
 
-[Coffee Animation credit](https://codingartistweb.com/2021/08/coffee-machine-css-animation/)
+[Coffee Animation credit. ](https://codingartistweb.com/2021/08/coffee-machine-css-animation/)
