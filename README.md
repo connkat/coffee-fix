@@ -6,6 +6,6 @@ Project made to demonstrate a straight forward way to use the most common React 
 
 ![alt text](src/images/design-fix.png)
 
-[Check out the project here](https://coffee-fix.net)
+[Check out the project here! ](https://coffee-fix.net)
 
 [Coffee Animation credit. ](https://codingartistweb.com/2021/08/coffee-machine-css-animation/)
