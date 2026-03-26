@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: #efb54a;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.hidden {
+	display: none;
+}
+
+button {
+	all: unset;
+	text-decoration: underline;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+select {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 2vh;
+}

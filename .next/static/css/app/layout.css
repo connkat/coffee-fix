@@ -1,0 +1,29 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: #efb54a;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.hidden {
+	display: none;
+}
+
+button {
+	all: unset;
+	text-decoration: underline;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+select {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 2vh;
+}
+
