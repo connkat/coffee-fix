@@ -1,6 +1,6 @@
-import { useState } from "react";
+"use client";
 
-import tongueChart from "../../../images/tongue.jpeg";
+import { useState } from "react";
 
 export default function Tip() {
 	const [tongue, setTongue] = useState(false);
@@ -19,7 +19,7 @@ export default function Tip() {
 				<button className="tongue-btn" onClick={onTongueClick}>
 					X
 				</button>
-				<img src={tongueChart} alt="tongue chart" className="tongue-img" />
+				<img src="/tongue.jpeg" alt="tongue chart" className="tongue-img" />
 			</div>
 		</div>
 	);
